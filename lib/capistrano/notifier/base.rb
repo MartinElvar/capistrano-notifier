@@ -19,7 +19,8 @@ class Capistrano::Notifier::Base
   def git_log
     return unless git_range
 
-    `git log #{git_range} --no-color --pretty=format:'%an: %s (%h)' --abbrev-commit --no-merges --encoding=utf-8`
+    #`git log #{git_range} --no-color --pretty=format:'%an: %s (%h)' --abbrev-commit --no-merges --encoding=utf-8`
+    `git log b00bfbc..20e0280 --no-color --pretty=format:'%an: %s (%h)' --abbrev-commit --no-merges --encoding=utf-8`
   end
 
   def git_previous_revision
