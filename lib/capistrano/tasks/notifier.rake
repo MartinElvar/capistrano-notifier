@@ -8,6 +8,7 @@ namespace :deploy do
   namespace :notify do
     desc 'Send a deployment notification via email.'
     task :mail do
+      #encoding: utf-8
       Capistrano::Notifier::Mail.new().perform
 
       if fetch(:notifier_mail_options)[:method] == :test
